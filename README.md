@@ -11,6 +11,10 @@ https://gitlab.com/-/user_settings/personal_access_tokens
 https://--------:########@gitlab.com/tech-group2695101/tourist-website.git
     (--------[user name git lab])
     (--------[user token git lab])
+
+cd tourist-website 
+cd tourist
+python3 manage.py runserver
 ```
 
 ## Push your files
