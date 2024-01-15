@@ -1,0 +1,24 @@
+{% extends '../base.html' %}
+
+{% block title %}Booking{% endblock %}
+{% load static %}
+{% block content %}
+
+<div id="forms"></div>
+    <form class="form-group">
+        
+        <label for="username">Name</label>
+        <input class="form-control" id="username" placeholder="Name" type="text" maxlength="40" aria-describedby="user name"/>
+        <label for="usermail">Mail</label>
+        <input class="form-control" id="usermail" placeholder="Mail" type="email" maxlength="40" aria-describedby="user mail"/>
+        <label for="userphone">Phone</label>
+        <input class="form-control" id="userphone" placeholder="Phone" type="number" maxlength="20" aria-describedby="user phone"/>
+        <label>Pick Up Location</label>
+        <input class="form-control" id="pickup" placeholder="Pick Up" type="text" maxlength="40" aria-describedby="pick up Location"/>
+        <label>Drop Location</label>
+        <input class="form-control" id="drop" placeholder="Drop" type="text" maxlength="40" aria-describedby="drop Location"/>
+        <button id="Submit" type="submit" class="btn btn-primary">Submit</button>       
+    </form>
+
+
+    {% endblock %}
