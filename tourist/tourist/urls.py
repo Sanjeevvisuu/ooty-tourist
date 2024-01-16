@@ -1,3 +1,4 @@
+User
 """
 URL configuration for tourist project.
 
@@ -15,28 +16,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from website_app.urls import urlpatterns as website_app_urls
-from product.urls import urlpatterns as product_urls
+from django.urls import path,include
+from website_app.urls import *
+from product.urls import *
 from django.conf import settings
 from django.conf.urls.static import static
-<<<<<<< HEAD
-from contact.urls import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",include("website_app.urls")),
     path("product",include("product.urls")),
-    path("booking",include("booking.urls")),
-    path("contact",include("contact.urls")),
-=======
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("", include(website_app_urls, namespace='website')),
-    path("product", include(product_urls, namespace='product')),
-    path("booking", include("booking.urls", namespace='booking')),
->>>>>>> 11b0c7f8485b1db1e70008dd36ceaba44319e3bb
+    path("booking",include("booking.urls"))
 ]
-
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
