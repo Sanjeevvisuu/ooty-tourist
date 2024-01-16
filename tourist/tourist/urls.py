@@ -20,11 +20,13 @@ from website_app.urls import *
 from product.urls import *
 from django.conf import settings
 from django.conf.urls.static import static
+from contact.urls import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",include("website_app.urls")),
     path("product",include("product.urls")),
-    path("booking",include("booking.urls"))
+    path("booking",include("booking.urls")),
+    path("contact",include("contact.urls")),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
