@@ -1,4 +1,4 @@
-User
+
 """
 URL configuration for tourist project.
 
