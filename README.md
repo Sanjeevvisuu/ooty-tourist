@@ -38,7 +38,8 @@ Tourist Website let you book online tour plan and cab service.
 
 ## Installation
 1. python 3
-2. django
+2. pip install django
+3. pip install psycopg2-binary
 
 
 ## Roadmap
