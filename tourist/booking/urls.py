@@ -1,6 +1,7 @@
 from django.urls import path
-from . import views
+from django.contrib import admin
 
 urlpatterns = [
-    path('', views.booking_index, name = 'booking')
+    path('admin/', admin.site.urls),
+
 ]

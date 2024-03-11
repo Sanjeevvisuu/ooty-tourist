@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     "booking",
     "contact",
     "about_us",
+    "payment",
+    # third party apps
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -82,13 +85,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'cL&ATtAWkQZ+BZ3A',
-        'HOST': 'db.hlgkwxiyomvsxlawifmk.supabase.co',
+        'USER': 'postgres.elxksqlvrggjaaozsgbx',
+        'PASSWORD': 'C1Y3CPEBdzSzNdRF',
+        'HOST': 'aws-0-ap-south-1.pooler.supabase.com',
         'PORT': '5432',
     } 
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -126,10 +128,19 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# Set the STATIC_ROOT for deployment
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# Set the STATIC_ROOT for deployment and to store the uploaded datas 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL="staticfiles/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#goole api key
+#install googlemaps connector tool to connect
+GOOGLE_API_KEY=os.environ.get("goole_map_api_key")#variable name
+
+# hosts allow
+ALLOWED_HOSTS = ['*']
+RAZORPAY_SECRET_KEY='gPQPgPseuNOHCYUnyV7dgN7u'
+RAZORPAY_PRODUCT_ID='rzp_test_0wwZuqW4AI94oE'
