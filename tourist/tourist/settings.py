@@ -85,9 +85,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER': 'postgres.elxksqlvrggjaaozsgbx',
-        'PASSWORD': 'C1Y3CPEBdzSzNdRF',
-        'HOST': 'aws-0-ap-south-1.pooler.supabase.com',
+        'USER': os.environ.get('sb_user'),
+        'PASSWORD': os.environ.get('sb_password'),
+        'HOST': os.environ.get('sb_host'),
         'PORT': '5432',
     } 
 }
@@ -142,5 +142,5 @@ GOOGLE_API_KEY=os.environ.get("goole_map_api_key")#variable name
 
 # hosts allow
 ALLOWED_HOSTS = ['*']
-RAZORPAY_SECRET_KEY='gPQPgPseuNOHCYUnyV7dgN7u'
-RAZORPAY_PRODUCT_ID='rzp_test_0wwZuqW4AI94oE'
+RAZORPAY_SECRET_KEY=os.environ.get('rz_py_key')
+RAZORPAY_PRODUCT_ID=os.environ.get('rz_py_id')
